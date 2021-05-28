@@ -19,11 +19,14 @@ exec clojure $OPTS -Sdeps "$DEPS" "$0" "$@"
   (:require
    [clojure.string :as str]))
 
-(defn is-symbol-a-fn? [[s _]]
-  (fn? @(resolve s)))
-
 (defn is-symbol-a-macro? [[_ v]]
   (:macro (meta v)))
+
+(defn is-symbol-special? [[s _]]
+  (special-symbol? @(resolve s)))
+
+(defn is-symbol-a-fn? [[s _]]
+  (fn? @(resolve s)))
 
 (defn escape [s]
   (str "\"" s "\""))
@@ -31,6 +34,7 @@ exec clojure $OPTS -Sdeps "$DEPS" "$0" "$@"
 (defn spit-symbols [file coll]
   (->> (map name coll)
        (sort)
+       (distinct)
        (map escape)
        (interpose " ")
        (apply str)
@@ -47,13 +51,16 @@ exec clojure $OPTS -Sdeps "$DEPS" "$0" "$@"
                (filter is-symbol-a-macro?)
                (filter is-symbol-a-fn?)
                (filter is-def-type-symbol?)
-               (map first)))
+               (map first)
+               (into ['def])))
 
 (def macros (->> (ns-publics 'clojure.core)
-                 (filter is-symbol-a-macro?)
-                 (filter is-symbol-a-fn?)
+                 (filter #(or (is-symbol-a-macro? %) (is-symbol-special? %)))
                  (filter (complement is-def-type-symbol?))
-                 (map first)))
+                 (map first)
+                 (into ['if 'do 'let 'quote 'var 'fn 'fn* 'loop 'recur 'throw 'try 'catch
+                        'monitor-enter 'monitor-exit
+                        '.])))
 
 (def functions (->> (ns-publics 'clojure.core)
                     (filter (complement is-symbol-a-macro?))
