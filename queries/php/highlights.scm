@@ -106,10 +106,11 @@
  "private"
  "protected"
  "public"
- "return"
  "static"
  "trait"
  ] @keyword
+
+"return" @keyword.return
 
 [
  "case"
@@ -119,6 +120,7 @@
  "endswitch"
  "if"
  "switch"
+ "match"
  ] @conditional
 
 [

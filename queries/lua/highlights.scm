@@ -54,10 +54,11 @@
 [
  "in"
  "local"
- "return"
  (break_statement)
  "goto"
 ] @keyword
+
+"return" @keyword.return
 
 ;; Operators
 

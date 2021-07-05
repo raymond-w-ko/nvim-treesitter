@@ -51,7 +51,7 @@
 (string_literal) @string
 (multiline_string_literal) @string 
 
-(escape_sequence) @constant.builtin
+(escape_sequence) @string.escape
 (char_literal (escape_sequence) @character)
 
 (label_identifier) @label
@@ -95,7 +95,6 @@
   ; "packed"
   "pub"
   "resume"
-  "return"
   ; "linksection"
   "struct"
   "suspend"
@@ -112,6 +111,8 @@
   "volatile"
   "while"
 ] @keyword
+
+"return" @keyword.return
 
 "fn" @keyword.function
 

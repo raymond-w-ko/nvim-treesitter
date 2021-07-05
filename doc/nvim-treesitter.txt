@@ -184,10 +184,15 @@ Supported options:
 COMMANDS                                            *nvim-treesitter-commands*
 
 								  *:TSInstall*
-:TSInstall| {language} ...~
+:TSInstall {language} ...~
 
 Install one or more treesitter parsers.
-You can use |:TSInstall| `all` to install all parsers.
+You can use |:TSInstall| `all` to install all parsers. Use |:TSInstall!| to
+force the reinstallation of already installed parsers.
+							      *:TSInstallSync*
+:TSInstallSync {language} ...~
+
+Perform the |:TSInstall| operation synchronously.
 
 							      *:TSInstallInfo*
 :TSInstallInfo~
@@ -195,16 +200,22 @@ You can use |:TSInstall| `all` to install all parsers.
 List informations about currently installed parsers
 
 								   *:TSUpdate*
-:TSUpdate {language}~
+:TSUpdate {language} ...~
 
-Update the installed parser of {language} or all installed parsers
-if {language} is omitted.
+Update the installed parser for one more {language} or all installed parsers
+if {language} is omitted. The specified parser is installed if it is not already
+installed.
+
+							       *:TSUpdateSync*
+:TSUpdateSync {language} ...~
+
+Perform the |:TSUpdate| operation synchronously.
 
 								*:TSUninstall*
-:TSUninstall {language}~
+:TSUninstall {language} ...~
 
-Deletes the parser for corresponding {language}. You can use 'all' for
-language to uninstall all parsers.
+Deletes the parser for one or more {language}. You can use 'all' for language
+to uninstall all parsers.
 
 								*:TSBufEnable*
 :TSBufEnable {module}~
@@ -516,6 +527,10 @@ For keywords used to define a fuction.
 							*hl-TSKeywordOperator*
 `TSKeywordOperator`
 for operators that are English words, e.g. `and`, `as`, `or`.
+
+							  *hl-TSKeywordReturn*
+`TSKeywordReturn`
+for the `return` and `yield` keywords.
 
 								  *hl-TSLabel*
 `TSLabel`
