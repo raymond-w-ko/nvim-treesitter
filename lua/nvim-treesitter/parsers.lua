@@ -37,7 +37,7 @@ list.javascript = {
     url = "https://github.com/tree-sitter/tree-sitter-javascript",
     files = { "src/parser.c", "src/scanner.c" },
   },
-  used_by = { "javascriptreact" },
+  used_by = { "javascriptreact", "ecma" },
   maintainers = { "@steelsojka" },
 }
 
@@ -207,6 +207,7 @@ list.html = {
     url = "https://github.com/tree-sitter/tree-sitter-html",
     files = { "src/parser.c", "src/scanner.cc" },
   },
+  used_by = { "html_tags" },
   maintainers = { "@TravonteD" },
 }
 
@@ -359,7 +360,7 @@ list.hcl = {
   },
   maintainers = { "@MichaHoffmann" },
   filetype = "hcl",
-  used_by = { "terraform", "packer", "nomad" },
+  used_by = { "terraform" },
 }
 
 -- FIXME(vigoux): markdown is broken for now
@@ -459,6 +460,7 @@ list.teal = {
   install_info = {
     url = "https://github.com/euclidianAce/tree-sitter-teal",
     files = { "src/parser.c", "src/scanner.c" },
+    requires_generate_from_grammar = true,
   },
   maintainers = { "@euclidianAce" },
 }

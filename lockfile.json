@@ -18,7 +18,7 @@
     "revision": "f7d100c4fbaa8aad537e80c7974c470c7fb6aeda"
   },
   "cmake": {
-    "revision": "7355866e1d07c51deb725628f184dba0da0cde98"
+    "revision": "d5a0b0b99249e313a01707ad5ebd793c9b70d189"
   },
   "comment": {
     "revision": "894b61d68a31d93c33ed48dcc7f427174b440abe"
@@ -33,7 +33,7 @@
     "revision": "94e10230939e702b4fa3fa2cb5c3bc7173b95d07"
   },
   "cuda": {
-    "revision": "ff35bee0faeb26dc3d17740c5f8436a72104dd4d"
+    "revision": "24e2f17174ec146d6a2ec05bf4ee6281971866d6"
   },
   "dart": {
     "revision": "6a25376685d1d47968c2cef06d4db8d84a70025e"
@@ -45,7 +45,7 @@
     "revision": "e10833bfee4a4f348a48c3f735bb3a2b04f6da0f"
   },
   "elixir": {
-    "revision": "74024384dd09a34908d534de320d0bc30f26ae8f"
+    "revision": "813c942ff5191372ae2fda11930834f2721aef89"
   },
   "elm": {
     "revision": "764876b93ab9d57532b6c550883b027a986a14db"
@@ -57,7 +57,7 @@
     "revision": "bc689e2ef264e2cba499cfdcd16194e8f5fe87d2"
   },
   "fish": {
-    "revision": "277f4120ffee42368d15b22351921b5495083600"
+    "revision": "db7139393e50765520618fa469f41dfbb0b3822b"
   },
   "fortran": {
     "revision": "0aab09259daafc6089eb0e68a5238ccc3bdf83fc"
@@ -111,7 +111,7 @@
     "revision": "7f720661de5316c0f8fee956526d4002fa1086d8"
   },
   "ledger": {
-    "revision": "d286f7120579ae8e853c8454e08079df4a57ea76"
+    "revision": "72319504776f14193472a6ad14abec0af0225cbe"
   },
   "lua": {
     "revision": "b6d4e9e10ccb7b3afb45018fbc391b4439306b23"
@@ -174,7 +174,7 @@
     "revision": "a22fa5e19bae50098e2252ea96cba3aba43f4c58"
   },
   "teal": {
-    "revision": "66563e1016580a9e2802861c18c0402fa3f19ed1"
+    "revision": "85d8a3b1e23f74495d1125c441d33af5f28c9dea"
   },
   "toml": {
     "revision": "8bd2056818b21860e3d756b5a58c4f6e05fb744e"
